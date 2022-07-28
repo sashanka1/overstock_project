@@ -70,22 +70,23 @@ padding-right: 3.5%;
     }
 
     .seric {
-        height: 35px;
-        width: 30px;
-        background-color: red;
-        margin-left: 0px;
-        padding: 3px;
-        padding-left: 0px;
+      height: 33px;
+      width: 30px;
+      background-color: red;
+      margin-left: 0px;
+      padding: 3px;
+      padding-left: 0px;
 
 
-    }
+  }
 
-    .fas {
-        margin: 4px;
-        padding: 3px;
+  .fas {
+      position: relative;
+      margin: 15px;
+      padding: 11px;
 
 
-    }
+  }
 
     .user {
         height: 35px;

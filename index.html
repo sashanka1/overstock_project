@@ -75,9 +75,9 @@
         }
 
         .seric {
-            height: 35px;
+            height: 33px;
             width: 30px;
-            background-color: red;
+            background-color: rgb(255, 38, 38);
             margin-left: 0px;
             padding: 3px;
             padding-left: 0px;
@@ -86,8 +86,9 @@
         }
 
         .fas {
-            margin: 4px;
-            padding: 3px;
+            position: relative;
+            margin: 15px;
+            padding: 11px;
 
 
         }
@@ -1052,16 +1053,16 @@ role: "Clean lines and bright hues craste a style both tetro sleek."
     });
 
 //logoutTheUser
-// document.querySelector("#logoutTheUser").addEventListener("click",function(){
-//      var recivelogdata=JSON.parse(localStorage.getItem("userDataOfLogIdIn"));
+document.querySelector("#logoutTheUser").addEventListener("click",function(){
+     var recivelogdata=JSON.parse(localStorage.getItem("userDataOfLogIdIn"));
  
-//       if(recivelogdata.length>0){
+      if(recivelogdata.length>0){
 
-//  localStorage.removeItem("userDataOfLogIdIn")
+ localStorage.removeItem("userDataOfLogIdIn")
 
-//  alert("logout successful")
-//  }
-// })
+ alert("logout successful")
+ }
+})
    
 
 </script>

@@ -77,7 +77,7 @@
         }
 
         .seric {
-            height: 35px;
+            height: 33px;
             width: 30px;
             background-color: red;
             margin-left: 0px;
@@ -88,8 +88,9 @@
         }
 
         .fas {
-            margin: 4px;
-            padding: 3px;
+            position: relative;
+            margin: 15px;
+            padding: 11px;
 
 
         }
@@ -670,6 +671,9 @@ finalcartitom.map(function (item) {
 
     var avtar = document.createElement("img");
     avtar.setAttribute("src", item.image);
+    var button = document.createElement("button")
+    button.innerHTML="remove"
+    button.className="remove_b"
 
     var box2 = document.createElement("div");
 
@@ -698,7 +702,7 @@ finalcartitom.map(function (item) {
     box1.append(avtar);
 
     box2.append(title, rating, sale, saving);
-    sale.append(price, rupee);
+    sale.append(price, rupee,button);
 
     sel.append(opt);
 

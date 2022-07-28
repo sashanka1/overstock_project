@@ -350,9 +350,9 @@ function check(createAccDetali){
 
     document.querySelector("#loginform").addEventListener("submit",lofunc);
    
-    var accde = JSON.parse(localStorage.getItem("allUseraccdata"));
-    var logde=JSON.parse(localStorage.getItem("userDataOfLogIdIn"))||[];
-    var x=JSON.parse(localStorage.getItem("CartItemsOfFur"));
+    // var accde = JSON.parse(localStorage.getItem("allUseraccdata"));
+    // var logde=JSON.parse(localStorage.getItem("userDataOfLogIdIn"))||[];
+    // var x=JSON.parse(localStorage.getItem("CartItemsOfFur"));
 //   if(x==null){
 //     cartArrFF=[];
 //   }
@@ -364,6 +364,27 @@ function check(createAccDetali){
     function lofunc(event){
     //  var x=accde;
     // console.log(accde);
+    var accde;
+    var alluserdata_database = JSON.parse(localStorage.getItem("allUseraccdata"));
+    if(alluserdata_database==null || alluserdata_database.length ==0){
+        accde=[];
+    }
+    else{
+        accde=alluserdata_database
+        console.log(accde.length)
+    }
+    // var accde = JSON.parse(localStorage.getItem("allUseraccdata"));
+    var logde;
+    var checkloginuser = JSON.parse(localStorage.getItem("userDataOfLogIdIn"))
+    if(checkloginuser==null || checkloginuser.length===0){
+         logde=[];
+    }
+    else{
+        logde = checkloginuser;
+    }
+
+    // var logde=JSON.parse(localStorage.getItem("userDataOfLogIdIn"))||[];
+    var x=JSON.parse(localStorage.getItem("CartItemsOfFur"));
       
         event.preventDefault();
         var loemi=document.querySelector("#logingmail").value;
@@ -375,9 +396,8 @@ function check(createAccDetali){
        }
 
       
-      
-       
-      
+      if(accde.length>=1){
+
         for(var i=0;i<accde.length;i++)
         {
             if(accde[i].cgmail==loemi&&accde[i].cpass==logpa&&logde.length==0){
@@ -396,6 +416,14 @@ function check(createAccDetali){
             
           
         }
+      }
+      else{
+         alert("Account dosen't exist")
+       // console.log("data",accde.length,accde)
+      }
+       
+      
+      
         // if(c>=1){
         //        alert("login sucessful");
         //     //    window.location.href="home.html"
